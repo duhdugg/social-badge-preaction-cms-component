@@ -18,18 +18,32 @@ const icons = {
   twitter: FaTwitterSquare,
 }
 
+const labels = {
+  dev: 'DEV.to',
+  facebook: 'Facebook',
+  github: 'GitHub',
+  instagram: 'Instagram',
+  linkedin: 'LinkedIn',
+  twitter: 'Twitter',
+}
+
 const Component = (props) => {
   const badges = []
   for (let key of Object.keys(icons)) {
     if (props[key]) {
-      badges.push({ key, url: props[key], Icon: icons[key] })
+      badges.push({
+        key,
+        url: props[key],
+        Icon: icons[key],
+        label: labels[key],
+      })
     }
   }
   return (
     <div className='social-badge-component'>
       <div style={{ display: 'flex' }}>
         {badges.map((badge) => {
-          const { key, url, Icon } = badge
+          const { key, url, Icon, label } = badge
           return (
             <a
               className={`${key}-badge`}
@@ -40,6 +54,7 @@ const Component = (props) => {
               target='_blank'
             >
               <Icon
+                aria-label={label}
                 style={{
                   width: `${props.size || 4}em`,
                   height: `${props.size || 4}em`,
