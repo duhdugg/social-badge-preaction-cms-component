@@ -1,9 +1,9 @@
 {
-  "name": "preaction-cms-block-extension-social-badge",
+  "name": "preaction-cms-blockext-social-badge",
   "version": "0.0.2",
   "private": true,
-  "main": "dist/preaction-cms-block-extension-social-badge.cjs.js",
-  "module": "dist/preaction-cms-block-extension-social-badge.esm.js",
+  "main": "dist/preaction-cms-blockext-social-badge.cjs.js",
+  "module": "dist/preaction-cms-blockext-social-badge.esm.js",
   "files": [
     "dist/*",
     "src/*",
