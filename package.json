@@ -1,9 +1,9 @@
 {
-  "name": "preaction-cms-blockext-social-badge",
+  "name": "preactioncms-blockext-socialbadge",
   "version": "0.0.2",
   "private": true,
-  "main": "dist/preaction-cms-blockext-social-badge.cjs.js",
-  "module": "dist/preaction-cms-blockext-social-badge.esm.js",
+  "main": "dist/preactioncms-blockext-socialbadge.cjs.js",
+  "module": "dist/preactioncms-blockext-socialbadge.esm.js",
   "files": [
     "dist/*",
     "src/*",
@@ -63,5 +63,9 @@
     "@preaction/inputs": "^1.3.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "description": "Social Badge Block Extension for Preaction CMS",
+  "repository": "https://github.com/duhdugg/preactioncms-blockext-socialbadge.git",
+  "author": "Doug Elkin <doug@dougelkin.com>",
+  "license": "MIT"
 }
