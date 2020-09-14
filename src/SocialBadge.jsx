@@ -43,7 +43,7 @@ class SocialBadge extends React.Component {
     }
     return (
       <div className='social-badge'>
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {badges.map((badge) => {
             const { key, url, Icon, label } = badge
             return (
