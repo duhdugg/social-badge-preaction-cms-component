@@ -51,7 +51,7 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "react-scripts": "3.4.3",
-    "rollup": "^2.27.0",
+    "rollup": "^2.27.1",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-visualizer": "^4.1.1"
