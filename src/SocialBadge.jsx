@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Checkbox, Input } from '@preaction/inputs'
+import { Input } from '@preaction/inputs'
 import {
   FaDev,
   FaFacebookSquare,
@@ -58,36 +58,27 @@ class SocialBadge extends React.Component {
                 <Icon
                   aria-label={label}
                   style={{
-                    width: `${this.props.size || 4}em`,
-                    height: `${this.props.size || 4}em`,
+                    width: `${this.props.size}em`,
+                    height: `${this.props.size}em`,
                   }}
                 />
               </a>
             )
           })}
         </div>
-        {this.props.debug ? (
-          <div>
-            <p>Here are the props I received:</p>
-            <pre>{JSON.stringify(this.props, undefined, 4)}</pre>
-          </div>
-        ) : (
-          ''
-        )}
       </div>
     )
   }
 }
 
 SocialBadge.propTypes = {
-  debug: PropTypes.bool,
   dev: PropTypes.string,
   facebook: PropTypes.string,
   github: PropTypes.string,
   instagram: PropTypes.string,
   linkedin: PropTypes.string,
   preaction: PropTypes.object.isRequired,
-  size: PropTypes.number,
+  size: PropTypes.string,
   twitter: PropTypes.string,
 }
 
@@ -100,7 +91,7 @@ SocialBadge.defaultProps = {
   instagram: '',
   linkedin: '',
   twitter: '',
-  debug: false,
+  size: '3',
 }
 
 class SocialBadgeSettings extends React.Component {
@@ -109,6 +100,14 @@ class SocialBadgeSettings extends React.Component {
       <div>
         <h6>Social Badge Settings</h6>
         <hr className='mb-3' />
+        <Input
+          type='range'
+          label='Size'
+          min='2'
+          max='10'
+          value={this.props.propsData.size || '3'}
+          valueHandler={this.props.getPropsDataValueHandler('size')}
+        />
         <Input
           type='url'
           label='DEV URL'
@@ -144,11 +143,6 @@ class SocialBadgeSettings extends React.Component {
           label='Twitter URL'
           value={this.props.propsData.twitter}
           valueHandler={this.props.getPropsDataValueHandler('twitter')}
-        />
-        <Checkbox
-          label='Debug'
-          checked={!!this.props.propsData.debug}
-          valueHandler={this.props.getPropsDataValueHandler('debug')}
         />
       </div>
     )

@@ -10,7 +10,6 @@ const propsData = {
   instagram: 'about:blank',
   linkedin: 'https://www.linkedin.com/in/duhdugg',
   twitter: 'https://twitter.com/_duhdugg',
-  debug: false,
 }
 
 const mockPreaction = {
