@@ -2,6 +2,7 @@ import { SocialBadge } from './SocialBadge.jsx'
 import { Boilerplate, Card } from '@preaction/bootstrap-clips'
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './mock.scss'
 
 const propsData = {
   dev: 'https://dev.to/duhdugg',
@@ -50,7 +51,7 @@ class MockCMS extends React.Component {
   render() {
     // this emulates how the component is rendered in Preaction CMS
     return (
-      <div className='App'>
+      <div className='App mock'>
         <Boilerplate>
           <main className='mt-3 mb-3'>
             <Card
@@ -61,7 +62,11 @@ class MockCMS extends React.Component {
             </Card>
           </main>
           <footer>
-            <Card header='Settings View' headerTheme='dark'>
+            <Card
+              header='Settings View'
+              headerTheme='dark'
+              className='settings-view'
+            >
               <SocialBadge.Settings
                 propsData={propsData}
                 getPropsDataValueHandler={this.getPropsDataValueHandler.bind(

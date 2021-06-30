@@ -111,36 +111,42 @@ class SocialBadgeSettings extends React.Component {
         <Input
           type='url'
           label='DEV URL'
+          labelFloat
           value={this.props.propsData.dev}
           valueHandler={this.props.getPropsDataValueHandler('dev')}
         />
         <Input
           type='url'
           label='Facebook URL'
+          labelFloat
           value={this.props.propsData.facebook}
           valueHandler={this.props.getPropsDataValueHandler('facebook')}
         />
         <Input
           type='url'
           label='GitHub URL'
+          labelFloat
           value={this.props.propsData.github}
           valueHandler={this.props.getPropsDataValueHandler('github')}
         />
         <Input
           type='url'
           label='Instagram URL'
+          labelFloat
           value={this.props.propsData.instagram}
           valueHandler={this.props.getPropsDataValueHandler('instagram')}
         />
         <Input
           type='url'
           label='LinkedIn URL'
+          labelFloat
           value={this.props.propsData.linkedin}
           valueHandler={this.props.getPropsDataValueHandler('linkedin')}
         />
         <Input
           type='url'
           label='Twitter URL'
+          labelFloat
           value={this.props.propsData.twitter}
           valueHandler={this.props.getPropsDataValueHandler('twitter')}
         />
