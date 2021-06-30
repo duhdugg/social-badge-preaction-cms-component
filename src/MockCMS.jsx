@@ -9,7 +9,7 @@ const propsData = {
   facebook: 'about:blank',
   github: 'https://github.com/duhdugg',
   instagram: 'about:blank',
-  linkedin: 'https://www.linkedin.com/in/duhdugg',
+  linkedin: 'about:blank',
   twitter: 'https://twitter.com/_duhdugg',
 }
 
